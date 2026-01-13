@@ -45,7 +45,7 @@ class ISDNXML2RDFMapper(RDFMapper):
 
     @staticmethod
     def map_to_triples(row: ISDNRecord) -> tuple[URIRef, list[_TripleMapType]]:
-        graph = ISDN_GRAPH.ageUnrestricted
+        graph = None
         if row.rating_age == "15禁":
             graph = ISDN_GRAPH.ageRestricted15
         elif row.rating_age == "18禁":
@@ -54,6 +54,7 @@ class ISDNXML2RDFMapper(RDFMapper):
         s = ISDN_RES[row.isdn.code]
 
         triples = [
+            (s, OWL.sameAs, ISDN_RES_PURL[row.isdn.code]),
             (s, RDF.type, ISDN.DoujinProduct),
             (s, RDF.type, PRODUCT_TYPE_MAP[row.type]),
             (s, ISDN.isdn, row.isdn.code),

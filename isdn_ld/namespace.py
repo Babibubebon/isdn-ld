@@ -1,12 +1,12 @@
 from rdflib import Namespace
-from rdflib.namespace import RDF, RDFS, XSD, ClosedNamespace
+from rdflib.namespace import OWL, RDF, RDFS, XSD, ClosedNamespace
 
 SCHEMA = Namespace("http://schema.org/")
-ISDN_RES = Namespace("https://metadata.moe/isdn/res/")
-
+ISDN_RES = Namespace("http://metadata.moe/isdn/res/")
+ISDN_RES_PURL = Namespace("http://purl.org/isdn/")
 
 ISDN = ClosedNamespace(
-    "https://metadata.moe/ns/isdn/",
+    "http://metadata.moe/ns/isdn/",
     [
         # Classes
         "DoujinProduct",
@@ -48,17 +48,17 @@ ISDN = ClosedNamespace(
     ],
 )
 
-ISDN_GRAPH = ClosedNamespace(
-    "https://metadata.moe/isdn/graph/", ["ageUnrestricted", "ageRestricted15", "ageRestricted18"]
-)
+ISDN_GRAPH = ClosedNamespace("http://metadata.moe/isdn/graph/", ["ageRestricted15", "ageRestricted18"])
 
 
 __all__ = [
+    "OWL",
     "RDF",
     "RDFS",
     "XSD",
     "SCHEMA",
     "ISDN",
     "ISDN_RES",
+    "ISDN_RES_PURL",
     "ISDN_GRAPH",
 ]

@@ -28,7 +28,7 @@ isdnld convert /path/to/xml_files/ /path/to/output/isdnld.nq
 
 quads形式で変換すると、コンテンツのレーティングに応じてグラフURIを分ける。
 
-- `https://metadata.moe/isdn/graph/ageUnrestricted` : 一般
+- デフォルトグラフ : 一般
 - `https://metadata.moe/isdn/graph/ageRestricted15` : 15禁
 - `https://metadata.moe/isdn/graph/ageRestricted18` : 18禁
 
