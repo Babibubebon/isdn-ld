@@ -29,12 +29,12 @@ isdnld convert /path/to/xml_files/ /path/to/output/isdnld.nq
 quads形式で変換すると、コンテンツのレーティングに応じてグラフURIを分ける。
 
 - デフォルトグラフ : 一般
-- `https://metadata.moe/isdn/graph/ageRestricted15` : 15禁
-- `https://metadata.moe/isdn/graph/ageRestricted18` : 18禁
+- `http://metadata.moe/isdn/graph/ageRestricted15` : 15禁
+- `http://metadata.moe/isdn/graph/ageRestricted18` : 18禁
 
 ### Resource URI
 
-`https://metadata.moe/isdn/res/{ISDN}`
+`http://metadata.moe/isdn/res/{ISDN}`
 
 ### Vocabulary
 
