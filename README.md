@@ -2,13 +2,13 @@
 
 [ISDN (International Standard Dojin Numbering)](https://isdn.jp/) の書誌情報を Linked Data (RDFデータセット) に変換する。
 
-## Usage
-
-### Install
+## Installation
 
 ```shell
 pip install isdn-ld
 ```
+
+## Usage
 
 ### Convert
 
@@ -24,6 +24,28 @@ isdnld convert /path/to/xml_files/ /path/to/output/isdnld.nq
 
 このXMLから少し意味的に理解を加えて設計した RDF モデルへマッピングしている。
 
+### Vocabulary
+
+[Schema.org](https://schema.org/) の語彙をベースとしつつ、必要に応じて以下の名前空間で独自の語彙を定義している。
+
+- 独自語彙の名前空間: `http://metadata.moe/ns/isdn/`
+
+### Application Profile
+
+[DCTAP (DC Tabular Application Profiles)](https://www.dublincore.org/specifications/dctap/) でアプリケーションプロファイルを記述している。
+
+- [tap.csv](./dctap/tap.csv)
+
+Convert DCTAP to SHACL:
+
+```shell
+tap2shacl -c ./dctap/dctap.yml \
+  -a ./dctap/about.csv \
+  -ns ./dctap/namespaces.csv \
+  -s ./dctap/shapes.csv \
+  ./dctap/tap.csv
+```
+
 ### Graph URIs
 
 quads形式で変換すると、コンテンツのレーティングに応じてグラフURIを分ける。
@@ -35,7 +57,3 @@ quads形式で変換すると、コンテンツのレーティングに応じて
 ### Resource URI
 
 `http://metadata.moe/isdn/res/{ISDN}`
-
-### Vocabulary
-
-WIP
