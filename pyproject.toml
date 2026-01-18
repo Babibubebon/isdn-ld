@@ -33,5 +33,6 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "ruff (>=0.14.11,<0.15.0)"
+    "ruff (>=0.14.11,<0.15.0)",
+    "tap2shacl @ git+ssh://git@github.com/Babibubebon/TAP2SHACL.git@main",
 ]
