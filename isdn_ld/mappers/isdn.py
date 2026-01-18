@@ -64,6 +64,7 @@ class ISDNXML2RDFMapper(RDFMapper):
                 bpo(
                     [
                         (RDF.type, SCHEMA.PropertyValue),
+                        (RDF.type, ISDN.ISDNIdentifier),
                         (SCHEMA.propertyID, "ISDN"),
                         (SCHEMA.value, Literal(row.isdn.code)),
                         (SCHEMA.alternateName, row.disp_isdn),
@@ -80,17 +81,19 @@ class ISDNXML2RDFMapper(RDFMapper):
             (s, SCHEMA.category, row.type),
             (s, ISDN.ratingGender, row.rating_gender),
             (s, ISDN.ratingAge, row.rating_age),
-            (s, SCHEMA.name, Literal(row.product_name, lang="ja")),
-            (s, SCHEMA.name, Literal(row.product_yomi, lang="ja-Hira")),
+            (s, SCHEMA.name, row.product_name),
+            (s, RDFS.label, Literal(row.product_name, lang="ja")),
+            (s, RDFS.label, Literal(row.product_yomi, lang="ja-Hira")),
             (
                 s,
                 SCHEMA.publisher,
                 bpo(
                     [
                         (RDF.type, SCHEMA.Organization),
-                        (SCHEMA.name, Literal(row.publisher_name, lang="ja")),
-                        (SCHEMA.name, Literal(row.publisher_yomi, lang="ja-Hira")),
-                        (SCHEMA.identifier, row.publisher_code),
+                        (SCHEMA.name, row.publisher_name),
+                        (RDFS.label, Literal(row.publisher_name, lang="ja")),
+                        (RDFS.label, Literal(row.publisher_yomi, lang="ja-Hira")),
+                        (ISDN.isdnRegistrant, row.publisher_code),
                     ]
                 ),
             ),
@@ -169,6 +172,7 @@ class ISDNXML2RDFMapper(RDFMapper):
                     bpo(
                         [
                             (RDF.type, SCHEMA.PropertyValue),
+                            (RDF.type, ISDN.UserOption),
                             (SCHEMA.name, option.property),
                             (SCHEMA.value, option.value),
                         ]

@@ -9,9 +9,11 @@ ISDN = ClosedNamespace(
     "http://metadata.moe/ns/isdn/",
     [
         # Classes
+        "ISDNIdentifier",
         "DoujinProduct",
         "ComiketGenre",
         "CCode",
+        "UserOption",
         ## 形態
         "Book",
         "DoujinGoods",
