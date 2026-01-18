@@ -868,7 +868,7 @@ dev = ["black (>=21.6b0)", "pytest (>=6.2)", "pytest-black (>=0.3.12)"]
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/Babibubebon/TAP2SHACL.git"
+url = "https://github.com/Babibubebon/TAP2SHACL.git"
 reference = "main"
 resolved_reference = "591552d3eef36d35c0c0c87be30c4f6eba8b4b20"
 
