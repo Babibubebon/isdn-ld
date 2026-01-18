@@ -1,0 +1,15 @@
+extra_statement_template_elements:
+  - severity
+  - propertyDescription
+  - message
+  - valueClass
+extra_value_node_types:
+  - iri bnode
+  - iri literal
+  - bnode literal
+  - iri bnode literal
+picklist_item_separator: "|"
+
+shacl:
+  property_shape:
+    name_template: "${shapeID}_${propertyLabel}"

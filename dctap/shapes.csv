@@ -1,0 +1,10 @@
+shapeID,label,comment,target,targetType,closed,ignoreProps,mandatory,severity,note
+DoujinProductShape,,,isdn:DoujinProduct,class,FALSE,,,,
+ISDNShape,,,isdn:ISDNIdentifier,class,FALSE,,,,
+OrganizationShape,,,schema:Organization,class,FALSE,,,,
+ComiketGenreShape,,,isdn:ComiketGenre,class,FALSE,,,,
+CCodeShape,,,isdn:CCode,class,FALSE,,,,
+OfferShape,,,schema:Offer,class,FALSE,,,,
+QuantitativeValueShape,,,schema:QuantitativeValue,class,FALSE,,,,
+UserOptionShape,,,isdn:UserOption,class,FALSE,,,,
+WebPageShape,,,schema:WebPage,class,FALSE,,,,
