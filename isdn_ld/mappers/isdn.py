@@ -55,6 +55,7 @@ class ISDNXML2RDFMapper(RDFMapper):
 
         triples = [
             (s, OWL.sameAs, ISDN_RES_PURL[row.isdn.code]),
+            (s, SCHEMA.mainEntityOfPage, ISDN_JP_PAGE[row.isdn.code]),
             (s, RDF.type, ISDN.DoujinProduct),
             (s, RDF.type, PRODUCT_TYPE_MAP[row.type]),
             (s, ISDN.isdn, row.isdn.code),

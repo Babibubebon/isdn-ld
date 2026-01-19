@@ -51,9 +51,9 @@ tap2shacl -c ./dctap/dctap.yml \
 quads形式で変換すると、コンテンツのレーティングに応じてグラフURIを分ける。
 
 - デフォルトグラフ : 一般
-- `http://metadata.moe/isdn/graph/ageRestricted15` : 15禁
-- `http://metadata.moe/isdn/graph/ageRestricted18` : 18禁
+- `http://isdn.metadata.moe/graph/ageRestricted15` : 15禁
+- `http://isdn.metadata.moe/graph/ageRestricted18` : 18禁
 
 ### Resource URI
 
-`http://metadata.moe/isdn/res/{ISDN}`
+`http://isdn.metadata.moe/res/{ISDN}`

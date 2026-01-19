@@ -2,8 +2,11 @@ from rdflib import Namespace
 from rdflib.namespace import OWL, RDF, RDFS, XSD, ClosedNamespace
 
 SCHEMA = Namespace("http://schema.org/")
-ISDN_RES = Namespace("http://metadata.moe/isdn/res/")
+ISDN_RES = Namespace("http://isdn.metadata.moe/res/")
 ISDN_RES_PURL = Namespace("http://purl.org/isdn/")
+
+ISDN_JP_PAGE = Namespace("https://isdn.jp/")
+ISDN_JP_XML = Namespace("https://isdn.jp/xml/")
 
 ISDN = ClosedNamespace(
     "http://metadata.moe/ns/isdn/",
@@ -50,7 +53,7 @@ ISDN = ClosedNamespace(
     ],
 )
 
-ISDN_GRAPH = ClosedNamespace("http://metadata.moe/isdn/graph/", ["ageRestricted15", "ageRestricted18"])
+ISDN_GRAPH = ClosedNamespace("http://isdn.metadata.moe/graph/", ["ageRestricted15", "ageRestricted18"])
 
 
 __all__ = [
@@ -62,5 +65,7 @@ __all__ = [
     "ISDN",
     "ISDN_RES",
     "ISDN_RES_PURL",
+    "ISDN_JP_PAGE",
+    "ISDN_JP_XML",
     "ISDN_GRAPH",
 ]
